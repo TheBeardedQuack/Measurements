@@ -1,0 +1,8 @@
+C:\Users\Benji\Desktop\Units\Units\bin\Release\netstandard2.0\TBQ.Measurements.deps.json
+C:\Users\Benji\Desktop\Units\Units\bin\Release\netstandard2.0\TBQ.Measurements.dll
+C:\Users\Benji\Desktop\Units\Units\bin\Release\netstandard2.0\TBQ.Measurements.pdb
+C:\Users\Benji\Desktop\Units\Units\obj\Release\netstandard2.0\TBQ.Measurements.csproj.CoreCompileInputs.cache
+C:\Users\Benji\Desktop\Units\Units\obj\Release\netstandard2.0\TBQ.Measurements.AssemblyInfoInputs.cache
+C:\Users\Benji\Desktop\Units\Units\obj\Release\netstandard2.0\TBQ.Measurements.AssemblyInfo.cs
+C:\Users\Benji\Desktop\Units\Units\obj\Release\netstandard2.0\TBQ.Measurements.dll
+C:\Users\Benji\Desktop\Units\Units\obj\Release\netstandard2.0\TBQ.Measurements.pdb

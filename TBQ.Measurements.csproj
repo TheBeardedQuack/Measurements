@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.0.0.1</Version>
+    <Authors>Benjamin James Fisher</Authors>
+    <Product>Units Library</Product>
+    <Description>A simple library that provides an easy way to manage multiple units within an application. This package provides a unit type class for several types of common measurements, and derived classes for each unit within that measurement type. This allows functions to be built to accept the measurement type and be able to be passed a specific units from a user interface or other libraries and the function simply creates a new instance of the derived type it requires, and the library will handle the conversion.</Description>
+    <Copyright>Benjamin James Fisher, 2018-09-11</Copyright>
+    <PackageTags>Measurements, Conversion</PackageTags>
+    <PackageReleaseNotes>Refactered the Temperature measurement under its own namespace. This structure will be used from now on with each measurement type using its own namespace to prevent naming collisions across different measurement types.
+Fixed a error in the conversion to and from Kelvin.
+Added Rankine (°R), Delisle (°De), Newton (°N), Réaumur (°Ré) and Rømer (°Rø) to the Temperature measurement.
+</PackageReleaseNotes>
+    <Company>Benjamin James Fisher</Company>
+    <PackageId>TBQ.Measurements</PackageId>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+</Project>
