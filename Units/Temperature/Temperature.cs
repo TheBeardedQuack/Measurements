@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Linq;
 
 namespace TBQ.Measurements.Temperature
 {
@@ -94,6 +96,36 @@ namespace TBQ.Measurements.Temperature
         public event EventHandler<double> ValueChanged;
 
         public static Type BaseUnit { get; } = typeof(Celsius);
+
+        /// <summary>Attempts to parse an input string as a temperature</summary>
+        /// <param name="temperature">String to be parsed as a a temperature, requires the unit symbol to select the measurement unit</param>
+        /// <remarks>I believe this is a terrible way of attempting to resolve the possible units but at least it automatically includes future additions</remarks>
+        public static Temperature Parse(string temperature)
+        {
+            var units = from t in Assembly.GetTypes()
+                        where t.IsSubclassOf(typeof(Temperature))
+                        select t;
+            
+            var value = double.Parse(temperature);
+
+            Type unitType = null;
+            foreach(var unit in units)
+            {
+                try
+                {
+                    unit.GetConstructor(new Type[] { typeof(double) });
+                }
+                catch(Exception ex)
+                {
+                }
+            }
+
+            if(unitType is null)
+                throw new ArgumentException("Invalid format, cannot parse ")
+        }
+        public abstract Temperature Parse();
+
+        private static Assembly Assembly { get; } = typeof(Temperature).Assembly;
 
         public string MeasurementType { get; } = nameof(Temperature);
         public abstract string Name { get; }

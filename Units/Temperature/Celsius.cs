@@ -34,7 +34,7 @@
         {
             return new Celsius(-Value);
         }
-
+        
         public static Celsius operator +(Celsius temperature1, double temperature2)
         {
             return (Celsius)temperature1.Add(temperature2);
